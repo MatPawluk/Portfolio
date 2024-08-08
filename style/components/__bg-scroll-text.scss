@@ -1,0 +1,46 @@
+.hero__name {
+  &--h1 {
+    font-size: 9.6rem;
+    width: 200%;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(30%);
+
+    -moz-animation: my-animation 5s linear infinite;
+    -webkit-animation: my-animation 5s linear infinite;
+    animation: my-animation 5s linear infinite;
+  }
+
+  /* for Firefox */
+  @-moz-keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+    }
+  }
+
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from {
+      -webkit-transform: translateX(100%);
+    }
+    to {
+      -webkit-transform: translateX(-100%);
+    }
+  }
+
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+}

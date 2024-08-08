@@ -2,4 +2,37 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Anton", sans-serif;
+}
+
+.hero__name {
+  /* for Firefox */
+  /* for Chrome */
+}
+.hero__name--h1 {
+  font-size: 9.6rem;
+  width: 200%;
+  transform: translateX(30%);
+  animation: my-animation 5s linear infinite;
+}
+@keyframes my-animation {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }/*# sourceMappingURL=style.css.map */
