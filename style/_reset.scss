@@ -8,16 +8,13 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 h1,
 h2,
 h3 {
   font-family: "Anton", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
 }

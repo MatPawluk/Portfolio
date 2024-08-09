@@ -16,22 +16,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TimelineMax.min.js"></script>
   </head>
   <body>
-    <nav>
-      <div class="logo">
-        <div class="logo__img">PM.</div>
-        <p>Mateusz Pawluk</p>
-      </div>
-      <div class="menu">
-        <ul>
-          <li>O mnie</li>
-          <li>Projekty</li>
-          <li>Cennik</li>
+    <nav role="navigation">
+      <a href="#">
+        <div class="logo">
+          <div class="logo__img">PM.</div>
+          <p>Mateusz Pawluk</p>
+        </div></a
+      >
+      <div class="menuToggle">
+        <input type="checkbox" class="menuCheckbox" />
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul class="menu">
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>About</li></a>
+          <a href="#"><li>Info</li></a>
+          <a href="#"><li>Contact</li></a>
+          <a href="https://erikterwan.com/" target="_blank"
+            ><li>Show me more</li></a
+          >
         </ul>
-      </div>
-      <div class="btn-and-social">
-        <a href="#">Zróbmy coś razem</a>
-        <a href="#"><img src="" alt="Facebook icon" /></a>
-        <a href="#"> <img src="" alt="Github icon" /></a>
       </div>
     </nav>
     <header class="wraper">
@@ -94,9 +101,6 @@
               <span>Mateusz Pawluk</span>
             </li>
           </ul>
-          <!-- <p class="hero__name--first">
-            Pawluk<span style="color: transparent">&#160;</span>Mateusz
-          </p> -->
         </div>
       </div>
     </header>

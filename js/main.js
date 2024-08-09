@@ -59,3 +59,31 @@ $tickerWrapper
   .on("mouseleave", function () {
     infinite.play();
   });
+
+document.querySelector(".menuCheckbox").addEventListener("change", function () {
+  if (this.checked) {
+    document.body.classList.add("no-scroll");
+  } else {
+    document.body.classList.remove("no-scroll");
+  }
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const menuCheckbox = document.getElementById("menuCheckbox");
+  const menuToggle = document.querySelector(".menuToggle");
+  const menuLinks = document.querySelectorAll(".menu a");
+
+  menuCheckbox.addEventListener("change", function () {
+    if (menuCheckbox.checked) {
+      menuToggle.classList.add("menu-open");
+    } else {
+      menuToggle.classList.remove("menu-open");
+    }
+  });
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      menuToggle.classList.remove("menu-open");
+      menuCheckbox.checked = false;
+    });
+  });
+});

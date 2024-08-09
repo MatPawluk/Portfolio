@@ -6,3 +6,11 @@ header {
   align-items: center;
   width: 100%;
 }
+
+body.no-scroll {
+  overflow: hidden; /* Disable body scroll */
+}
+
+body.no-scroll {
+  overflow: hidden;
+}

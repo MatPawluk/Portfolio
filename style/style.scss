@@ -6,3 +6,13 @@
 @use "./layout/nav" as *;
 
 @use "./components/bg-hero-text" as *;
+@use "./components/burger-menu" as *;
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+}
