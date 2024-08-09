@@ -4,27 +4,47 @@ nav {
   position: sticky;
   top: 0;
   width: 100%;
+  max-width: 100%;
   padding: 2rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255);
   z-index: 999;
   -webkit-box-shadow: 0px 11px 25px -12px rgba(66, 68, 90, 1);
   -moz-box-shadow: 0px 11px 25px -12px rgba(66, 68, 90, 1);
   box-shadow: 0px 11px 25px -12px rgba(66, 68, 90, 1);
+  transition: max-width 0.2s ease-in-out, padding 0.3s ease-in-out;
+
+  .menuToggle {
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+  }
 
   .logo {
     display: flex;
     gap: 0.8rem;
     align-items: center;
+    justify-content: center;
     font-family: "Anton", sans-serif;
     font-size: 2rem;
+
     &__img {
       padding: 1rem;
       border-radius: 15px;
       background-color: $rose;
       color: $white;
     }
+  }
+}
+
+nav.scrolled {
+  padding: 1rem 2rem;
+  max-width: 1100px;
+  transition: max-width 0.3s ease-in-out, padding 0.3s ease-in-out;
+  @media screen and (min-width: 1200px) {
+    top: 3rem;
+    border-radius: 15px;
   }
 }

@@ -1,14 +1,15 @@
 header {
   position: relative;
-  height: 100dvh;
+  height: 95dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  overflow: hidden;
 }
 
 body.no-scroll {
-  overflow: hidden; /* Disable body scroll */
+  overflow: hidden;
 }
 
 body.no-scroll {

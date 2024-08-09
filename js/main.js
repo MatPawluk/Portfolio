@@ -17,7 +17,7 @@ $clonedList.addClass("cloned").appendTo($tickerWrapper);
 
 //TimelineMax
 var infinite = new TimelineMax({ repeat: -1, paused: true });
-var time = 100;
+var time = 150;
 
 infinite
   .fromTo(
@@ -85,5 +85,16 @@ document.addEventListener("DOMContentLoaded", function () {
       menuToggle.classList.remove("menu-open");
       menuCheckbox.checked = false;
     });
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector("nav");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 2) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
   });
 });

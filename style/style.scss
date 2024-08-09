@@ -1,12 +1,15 @@
 @use "./reset" as *;
 @use "./colors" as *;
 
-@use "./layout/wraper" as *;
+@use "./layout/wrap" as *;
 @use "./layout/header" as *;
 @use "./layout/nav" as *;
+@use "./layout/about-me" as *;
 
 @use "./components/bg-hero-text" as *;
 @use "./components/burger-menu" as *;
+@use "./components/nav-big" as *;
+@use "./components/logos" as *;
 
 body {
   font-family: "Poppins", sans-serif;
@@ -15,4 +18,111 @@ body {
   align-items: center;
   justify-content: center;
   background-color: $primary;
+}
+
+header {
+  .hero {
+    width: 100%;
+
+    &__circle {
+      width: 480px;
+      height: 480px;
+      position: absolute;
+      border: 1px solid $violet;
+      border-radius: 50%;
+      top: -200px;
+      left: -200px;
+      z-index: 10;
+
+      &::after {
+        content: "";
+
+        width: 10px;
+        height: 10px;
+        background: $rose;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        margin: auto;
+        animation: circle 6s linear infinite;
+        @keyframes circle {
+          0% {
+            transform: rotate(0deg) translate(-240px) rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg) translate(-240px) rotate(-360deg);
+          }
+        }
+      }
+    }
+
+    &__circle-2 {
+      width: 480px;
+      height: 480px;
+      position: absolute;
+      border: 1px solid $violet;
+      border-radius: 50%;
+      bottom: -200px;
+      right: -200px;
+      z-index: 10;
+
+      &::after {
+        content: "";
+
+        width: 10px;
+        height: 10px;
+        background: $rose;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        margin: auto;
+        animation: circle 10s linear infinite;
+        @keyframes circle {
+          0% {
+            transform: rotate(0deg) translate(-240px) rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg) translate(-240px) rotate(-360deg);
+          }
+        }
+      }
+    }
+
+    &__paragraf {
+      display: flex;
+      flex-direction: column;
+      font-size: 3.6rem;
+      font-weight: 600;
+      margin-block-start: 3rem;
+      padding: 2rem 2rem;
+      @media screen and (min-width: 1400px) {
+        font-size: 5.6rem;
+      }
+    }
+
+    &__img {
+      display: none;
+
+      @media screen and (min-width: 992px) {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        img {
+          position: absolute;
+          top: -200px;
+          width: 900px;
+        }
+      }
+    }
+  }
 }

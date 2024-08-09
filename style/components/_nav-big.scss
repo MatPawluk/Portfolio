@@ -1,0 +1,56 @@
+@use "../colors" as *;
+
+.nav__big {
+  display: none;
+
+  &--social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    .btn-cta {
+      margin-right: 1.2rem;
+      a {
+        padding: 1rem;
+        border: 1px solid $violet;
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 600;
+        display: grid;
+        place-items: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $violet;
+
+          color: $white;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      font-size: 1.5rem;
+
+      li {
+        position: relative;
+      }
+    }
+
+    i {
+      font-size: 3rem;
+      flex: 1;
+      color: $black;
+    }
+  }
+}
