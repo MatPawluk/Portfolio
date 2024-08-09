@@ -10,6 +10,10 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1,
@@ -18,21 +22,53 @@ h3 {
   font-family: "Anton", sans-serif;
 }
 
+.wraper {
+  max-width: 124rem;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+header {
+  position: relative;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+  top: 0.5rem;
+  z-index: 9999;
+}
+
 .hero__name {
-  /* for Firefox */
-  /* for Chrome */
+  font-family: "Anton", sans-serif;
+  font-size: 10rem;
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  height: 13rem;
+  background: #fff;
+  width: 99.9%;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: -1;
 }
-.hero__name--h1 {
-  font-size: 9.6rem;
-  width: 200%;
-  transform: translateX(30%);
-  animation: my-animation 5s linear infinite;
+.hero__name ul.list {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-@keyframes my-animation {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+.hero__name ul.list.cloned {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.hero__name ul.list li {
+  float: left;
+  padding-left: 20px;
 }/*# sourceMappingURL=style.css.map */
