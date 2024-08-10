@@ -1,21 +1,16 @@
 .hero__name {
   font-family: "Anton", sans-serif;
-  font-size: 10rem;
+  font-size: 20rem;
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 0%;
-  height: 13rem;
+  height: 25rem;
   width: 99.9%;
-
-  @media screen and (min-width: 768px) {
-    font-size: 20rem;
-    top: 20%;
-    height: 25rem;
-  }
 
   @media screen and (min-width: 998px) {
     font-size: 44rem;
     height: 74rem;
+    top: 20%;
   }
   overflow: hidden;
   cursor: pointer;

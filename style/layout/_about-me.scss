@@ -7,20 +7,54 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  overflow: hidden;
 }
 
 .about__container {
   height: 100%;
-  overflow: hidden;
+  width: 100%;
+  color: $white;
+
   .content {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 100px;
+    &__arow {
+      display: none;
+    }
+    @media screen and (min-width: 992px) {
+      &__arow {
+        display: block;
+        width: 145rem;
+        height: 4rem;
+        background-color: $violet;
+        position: relative;
+        margin-bottom: auto;
+
+        &::before {
+          content: "";
+          width: 31rem;
+          height: 4rem;
+          background-color: inherit;
+          top: 104px;
+          right: -30px;
+          position: absolute;
+          transform: rotate(-45deg);
+        }
+
+        &::after {
+          content: "";
+          width: 4rem;
+          height: 25rem;
+          background-color: inherit;
+          top: 0;
+          right: 0;
+          position: absolute;
+        }
+      }
+    }
 
     &__text {
-      max-width: 300px;
       p {
         overflow-wrap: break-word;
         word-wrap: break-word;

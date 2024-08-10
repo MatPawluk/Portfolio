@@ -16,6 +16,14 @@ h3 {
   font-family: "Anton", sans-serif;
 }
 
+h2 {
+  font-size: 7.6rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -44,6 +52,19 @@ li {
   margin: 0;
 }
 
+@media screen and (min-width: 992px) {
+  h2 {
+    font-size: 15rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  h2 {
+    font-size: 18rem;
+  }
+  p {
+    font-size: 3rem;
+  }
+}
 .wrap {
   max-width: 1440px;
   padding: 3rem;
@@ -120,21 +141,50 @@ nav.scrolled {
   justify-content: center;
   align-items: center;
   width: 100%;
-  overflow: hidden;
 }
 
 .about__container {
   height: 100%;
-  overflow: hidden;
+  width: 100%;
+  color: #ffffff;
 }
 .about__container .content {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 100px;
 }
-.about__container .content__text {
-  max-width: 300px;
+.about__container .content__arow {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .about__container .content__arow {
+    display: block;
+    width: 145rem;
+    height: 4rem;
+    background-color: #5d007c;
+    position: relative;
+    margin-bottom: auto;
+  }
+  .about__container .content__arow::before {
+    content: "";
+    width: 31rem;
+    height: 4rem;
+    background-color: inherit;
+    top: 104px;
+    right: -30px;
+    position: absolute;
+    transform: rotate(-45deg);
+  }
+  .about__container .content__arow::after {
+    content: "";
+    width: 4rem;
+    height: 25rem;
+    background-color: inherit;
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
 }
 .about__container .content__text p {
   overflow-wrap: break-word;
@@ -143,27 +193,21 @@ nav.scrolled {
 
 .hero__name {
   font-family: "Anton", sans-serif;
-  font-size: 10rem;
+  font-size: 20rem;
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 0%;
-  height: 13rem;
+  height: 25rem;
   width: 99.9%;
   overflow: hidden;
   cursor: pointer;
   z-index: -1;
 }
-@media screen and (min-width: 768px) {
-  .hero__name {
-    font-size: 20rem;
-    top: 20%;
-    height: 25rem;
-  }
-}
 @media screen and (min-width: 998px) {
   .hero__name {
     font-size: 44rem;
     height: 74rem;
+    top: 20%;
   }
 }
 .hero__name ul.list {
@@ -358,6 +402,7 @@ main .logos::after {
 main .logos .logos__slide {
   display: inline-block;
   animation: 25s logos-animation infinite linear;
+  animation-direction: reverse;
 }
 main .logos .logos__slide img {
   margin-inline: 1rem;
@@ -365,6 +410,19 @@ main .logos .logos__slide img {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 8px 8px 24px 0px rgb(66, 68, 90);
+}
+@media screen and (min-width: 992px) {
+  main .logos .logos__slide img {
+    width: 90px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1800px) {
+  main .logos .logos__slide img {
+    margin-inline: 2rem;
+    width: 110px;
+    height: auto;
+  }
 }
 
 @keyframes logos-animation {
@@ -481,5 +539,74 @@ header .hero__img {
     position: absolute;
     top: -200px;
     width: 900px;
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 3rem;
+  background-color: #fff;
+}
+.projects .wrap {
+  display: flex;
+  width: 100%;
+}
+.projects__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow-x: scroll;
+  gap: 50px;
+  width: 100%;
+}
+@media screen and (min-width: 1442px) {
+  .projects__container {
+    overflow: hidden;
+  }
+}
+.projects__container a .project__more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #b747dc;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+.projects__container a .project__more:hover {
+  background: transparent;
+  border: 1px solid #b747dc;
+  color: #b747dc;
+}
+.projects .project {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.projects .project .project__img img {
+  width: 286px;
+  height: 600px;
+}
+@media screen and (min-width: 1440px) {
+  .projects .project .project__img img {
+    opacity: 0.2;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .projects .project .project__img img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+@media screen and (min-width: 2400px) {
+  .projects .project .project__img img {
+    width: 400px;
+    height: 800px;
   }
 }/*# sourceMappingURL=style.css.map */

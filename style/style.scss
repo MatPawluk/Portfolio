@@ -126,3 +126,76 @@ header {
     }
   }
 }
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 3rem;
+  background-color: #fff;
+  .wrap {
+    display: flex;
+    width: 100%;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow-x: scroll;
+    gap: 50px;
+    width: 100%;
+
+    @media screen and (min-width: 1442px) {
+      overflow: hidden;
+    }
+
+    a {
+      .project__more {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+        background-color: $rose;
+        color: $white;
+        font-weight: 600;
+        font-size: 2rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background: transparent;
+          border: 1px solid $rose;
+          color: $rose;
+        }
+      }
+    }
+  }
+  .project {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .project__img {
+      img {
+        width: 286px;
+        height: 600px;
+        @media screen and (min-width: 1440px) {
+          opacity: 0.2;
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 1;
+            transform: scale(1.1);
+          }
+        }
+
+        @media screen and (min-width: 2400px) {
+          width: 400px;
+          height: 800px;
+        }
+      }
+    }
+  }
+}

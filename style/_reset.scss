@@ -18,6 +18,14 @@ h3 {
   font-family: "Anton", sans-serif;
 }
 
+h2 {
+  font-size: 7.6rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -46,4 +54,20 @@ li {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+@media screen and (min-width: 992px) {
+  h2 {
+    font-size: 15rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  h2 {
+    font-size: 18rem;
+  }
+
+  p {
+    font-size: 3rem;
+  }
 }
