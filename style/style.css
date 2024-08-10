@@ -19,6 +19,31 @@ h3 {
 h2 {
   font-size: 7.6rem;
 }
+h2::after {
+  content: "";
+  width: 24rem;
+  height: 10rem;
+  background-color: rgba(183, 71, 220, 0.2);
+  position: absolute;
+  top: 23px;
+  right: -19px;
+}
+@media screen and (min-width: 992px) {
+  h2::after {
+    width: 43rem;
+    height: 18rem;
+    right: -20px;
+    top: 56px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  h2::after {
+    width: 45rem;
+    height: 20rem;
+    right: -20px;
+    top: 69px;
+  }
+}
 
 p {
   font-size: 1.8rem;
@@ -50,6 +75,10 @@ li {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+section {
+  padding-block: 3rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -372,10 +401,12 @@ nav.scrolled {
 main {
   width: 100vw;
 }
+main .carusele {
+  background-color: #b747dc;
+}
 main .logos {
   overflow: hidden;
   padding: 3rem 0;
-  background-color: #b747dc;
   white-space: nowrap;
   position: relative;
 }
@@ -413,7 +444,7 @@ main .logos .logos__slide img {
 }
 @media screen and (min-width: 992px) {
   main .logos .logos__slide img {
-    width: 90px;
+    width: 60px;
     height: auto;
   }
 }
@@ -549,11 +580,14 @@ header .hero__img {
   align-items: center;
   width: 100%;
   gap: 3rem;
-  background-color: #fff;
 }
 .projects .wrap {
   display: flex;
   width: 100%;
+}
+.projects .wrap h2 {
+  display: block;
+  position: relative;
 }
 .projects__container {
   display: flex;
@@ -561,7 +595,7 @@ header .hero__img {
   justify-content: space-around;
   overflow-x: scroll;
   gap: 50px;
-  width: 100%;
+  max-width: 90vw;
 }
 @media screen and (min-width: 1442px) {
   .projects__container {

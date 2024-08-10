@@ -2,10 +2,13 @@
 
 main {
   width: 100vw;
+
+  .carusele {
+    background-color: $rose;
+  }
   .logos {
     overflow: hidden;
     padding: 3rem 0;
-    background-color: $rose;
     white-space: nowrap;
     position: relative;
 
@@ -45,7 +48,7 @@ main {
         box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
 
         @media screen and (min-width: 992px) {
-          width: 90px;
+          width: 60px;
           height: auto;
         }
 
