@@ -1,7 +1,57 @@
-.logos {
-  overflow: hidden;
-  max-width: 99vw;
-  .logos__slide {
+@use "../colors" as *;
+
+main {
+  width: 100vw;
+  .logos {
+    overflow: hidden;
+    padding: 3rem 0;
+    background-color: $rose;
     white-space: nowrap;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0), $rose);
+      z-index: 2;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 100%;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), $rose);
+      z-index: 2;
+    }
+
+    .logos__slide {
+      display: inline-block;
+      animation: 25s logos-animation infinite linear;
+
+      img {
+        margin-inline: 1rem;
+        padding: 0.2em;
+        background-color: $white;
+        border-radius: 8px;
+        -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+        -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+        box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+      }
+    }
+  }
+}
+
+@keyframes logos-animation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
