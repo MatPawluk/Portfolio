@@ -83,12 +83,109 @@ header {
   width: 100%;
   overflow: hidden;
 }
-
-body.no-scroll {
+header .hero {
+  width: 100%;
+}
+header .hero__circle {
+  width: 480px;
+  height: 480px;
+  position: absolute;
+  border: 1px solid #5d007c;
+  border-radius: 50%;
+  top: -200px;
+  left: -200px;
+  z-index: 10;
+}
+header .hero__circle::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #b747dc;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
+  animation: circle 6s linear infinite;
+}
+@keyframes circle {
+  0% {
+    transform: rotate(0deg) translate(-240px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-240px) rotate(-360deg);
+  }
+}
+header .hero__circle-2 {
+  width: 480px;
+  height: 480px;
+  position: absolute;
+  border: 1px solid #5d007c;
+  border-radius: 50%;
+  bottom: -200px;
+  right: -200px;
+  z-index: 10;
+}
+header .hero__circle-2::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #b747dc;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
+  animation: circle 10s linear infinite;
+}
+@keyframes circle {
+  0% {
+    transform: rotate(0deg) translate(-240px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-240px) rotate(-360deg);
+  }
+}
+header .hero__paragraf {
+  display: flex;
+  flex-direction: column;
+  font-size: 3.6rem;
+  font-weight: 600;
+  margin-block-start: 3rem;
+  padding: 2rem 2rem;
+}
+@media screen and (min-width: 1400px) {
+  header .hero__paragraf {
+    font-size: 5.6rem;
+  }
+}
+header .hero__img {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  header .hero__img {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  header .hero__img img {
+    position: absolute;
+    top: -200px;
+    width: 900px;
+  }
+}
+header body.no-scroll {
   overflow: hidden;
 }
-
-body.no-scroll {
+header body.no-scroll {
   overflow: hidden;
 }
 
@@ -193,6 +290,103 @@ nav.scrolled {
 .about__container .content__text p {
   overflow-wrap: break-word;
   word-wrap: break-word;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 3rem;
+}
+.projects .wrap {
+  display: flex;
+  width: 100%;
+}
+.projects .wrap h2 {
+  display: block;
+  position: relative;
+}
+.projects .wrap h2::after {
+  content: "";
+  width: 24rem;
+  height: 10rem;
+  background-color: rgba(183, 71, 220, 0.2);
+  position: absolute;
+  top: 23px;
+  right: -19px;
+}
+@media screen and (min-width: 992px) {
+  .projects .wrap h2::after {
+    width: 43rem;
+    height: 18rem;
+    right: -20px;
+    top: 56px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .projects .wrap h2::after {
+    width: 45rem;
+    height: 20rem;
+    right: -20px;
+    top: 69px;
+  }
+}
+.projects__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow-x: scroll;
+  gap: 50px;
+  max-width: 90vw;
+}
+@media screen and (min-width: 1442px) {
+  .projects__container {
+    overflow: hidden;
+  }
+}
+.projects__container a .project__more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #b747dc;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+.projects__container a .project__more:hover {
+  background: transparent;
+  border: 1px solid #b747dc;
+  color: #b747dc;
+}
+.projects .project {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.projects .project .project__img img {
+  width: 286px;
+  height: 600px;
+}
+@media screen and (min-width: 1440px) {
+  .projects .project .project__img img {
+    opacity: 0.2;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .projects .project .project__img img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+@media screen and (min-width: 2400px) {
+  .projects .project .project__img img {
+    width: 400px;
+    height: 800px;
+  }
 }
 
 .hero__name {
@@ -446,201 +640,4 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #d9dfde;
-}
-
-header .hero {
-  width: 100%;
-}
-header .hero__circle {
-  width: 480px;
-  height: 480px;
-  position: absolute;
-  border: 1px solid #5d007c;
-  border-radius: 50%;
-  top: -200px;
-  left: -200px;
-  z-index: 10;
-}
-header .hero__circle::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background: #b747dc;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  margin: auto;
-  animation: circle 6s linear infinite;
-}
-@keyframes circle {
-  0% {
-    transform: rotate(0deg) translate(-240px) rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg) translate(-240px) rotate(-360deg);
-  }
-}
-header .hero__circle-2 {
-  width: 480px;
-  height: 480px;
-  position: absolute;
-  border: 1px solid #5d007c;
-  border-radius: 50%;
-  bottom: -200px;
-  right: -200px;
-  z-index: 10;
-}
-header .hero__circle-2::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background: #b747dc;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  margin: auto;
-  animation: circle 10s linear infinite;
-}
-@keyframes circle {
-  0% {
-    transform: rotate(0deg) translate(-240px) rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg) translate(-240px) rotate(-360deg);
-  }
-}
-header .hero__paragraf {
-  display: flex;
-  flex-direction: column;
-  font-size: 3.6rem;
-  font-weight: 600;
-  margin-block-start: 3rem;
-  padding: 2rem 2rem;
-}
-@media screen and (min-width: 1400px) {
-  header .hero__paragraf {
-    font-size: 5.6rem;
-  }
-}
-header .hero__img {
-  display: none;
-}
-@media screen and (min-width: 992px) {
-  header .hero__img {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  header .hero__img img {
-    position: absolute;
-    top: -200px;
-    width: 900px;
-  }
-}
-
-.projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 3rem;
-}
-.projects .wrap {
-  display: flex;
-  width: 100%;
-}
-.projects .wrap h2 {
-  display: block;
-  position: relative;
-}
-.projects .wrap h2::after {
-  content: "";
-  width: 24rem;
-  height: 10rem;
-  background-color: rgba(183, 71, 220, 0.2);
-  position: absolute;
-  top: 23px;
-  right: -19px;
-}
-@media screen and (min-width: 992px) {
-  .projects .wrap h2::after {
-    width: 43rem;
-    height: 18rem;
-    right: -20px;
-    top: 56px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .projects .wrap h2::after {
-    width: 45rem;
-    height: 20rem;
-    right: -20px;
-    top: 69px;
-  }
-}
-.projects__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  overflow-x: scroll;
-  gap: 50px;
-  max-width: 90vw;
-}
-@media screen and (min-width: 1442px) {
-  .projects__container {
-    overflow: hidden;
-  }
-}
-.projects__container a .project__more {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
-  background-color: #b747dc;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 2rem;
-  transition: all 0.3s ease-in-out;
-}
-.projects__container a .project__more:hover {
-  background: transparent;
-  border: 1px solid #b747dc;
-  color: #b747dc;
-}
-.projects .project {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.projects .project .project__img img {
-  width: 286px;
-  height: 600px;
-}
-@media screen and (min-width: 1440px) {
-  .projects .project .project__img img {
-    opacity: 0.2;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  .projects .project .project__img img:hover {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-}
-@media screen and (min-width: 2400px) {
-  .projects .project .project__img img {
-    width: 400px;
-    height: 800px;
-  }
 }/*# sourceMappingURL=style.css.map */
