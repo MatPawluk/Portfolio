@@ -19,31 +19,6 @@ h3 {
 h2 {
   font-size: 7.6rem;
 }
-h2::after {
-  content: "";
-  width: 24rem;
-  height: 10rem;
-  background-color: rgba(183, 71, 220, 0.2);
-  position: absolute;
-  top: 23px;
-  right: -19px;
-}
-@media screen and (min-width: 992px) {
-  h2::after {
-    width: 43rem;
-    height: 18rem;
-    right: -20px;
-    top: 56px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  h2::after {
-    width: 45rem;
-    height: 20rem;
-    right: -20px;
-    top: 69px;
-  }
-}
 
 p {
   font-size: 1.8rem;
@@ -588,6 +563,31 @@ header .hero__img {
 .projects .wrap h2 {
   display: block;
   position: relative;
+}
+.projects .wrap h2::after {
+  content: "";
+  width: 24rem;
+  height: 10rem;
+  background-color: rgba(183, 71, 220, 0.2);
+  position: absolute;
+  top: 23px;
+  right: -19px;
+}
+@media screen and (min-width: 992px) {
+  .projects .wrap h2::after {
+    width: 43rem;
+    height: 18rem;
+    right: -20px;
+    top: 56px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .projects .wrap h2::after {
+    width: 45rem;
+    height: 20rem;
+    right: -20px;
+    top: 69px;
+  }
 }
 .projects__container {
   display: flex;

@@ -140,6 +140,28 @@ header {
     h2 {
       display: block;
       position: relative;
+      &::after {
+        content: "";
+        width: 24rem;
+        height: 10rem;
+        background-color: rgba($rose, 0.2);
+        position: absolute;
+        top: 23px;
+        right: -19px;
+
+        @media screen and (min-width: 992px) {
+          width: 43rem;
+          height: 18rem;
+          right: -20px;
+          top: 56px;
+        }
+        @media screen and (min-width: 1440px) {
+          width: 45rem;
+          height: 20rem;
+          right: -20px;
+          top: 69px;
+        }
+      }
     }
   }
   &__container {
