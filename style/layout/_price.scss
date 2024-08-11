@@ -1,0 +1,32 @@
+@use "../colors" as *;
+
+.price {
+  background-color: $rose;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  h2 {
+    display: block;
+    width: 100%;
+  }
+
+  .services__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    .card1 {
+      grid-area: 1 / 1 / 3 / 2;
+    }
+    .card2 {
+      grid-area: 1 / 2 / 2 / 4;
+    }
+    .card3 {
+      grid-area: 2 / 2 / 3 / 4;
+    }
+  }
+}

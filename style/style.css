@@ -389,6 +389,35 @@ nav.scrolled {
   }
 }
 
+.price {
+  background-color: #b747dc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.price h2 {
+  display: block;
+  width: 100%;
+}
+.price .services__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+.price .services__cards .card1 {
+  grid-area: 1/1/3/2;
+}
+.price .services__cards .card2 {
+  grid-area: 1/2/2/4;
+}
+.price .services__cards .card3 {
+  grid-area: 2/2/3/4;
+}
+
 .hero__name {
   font-family: "Anton", sans-serif;
   font-size: 20rem;
