@@ -355,11 +355,11 @@ nav.scrolled {
   color: #ffffff;
   font-weight: 600;
   font-size: 2rem;
+  border: 1px solid #b747dc;
   transition: all 0.3s ease-in-out;
 }
 .projects__container a .project__more:hover {
   background: transparent;
-  border: 1px solid #b747dc;
   color: #b747dc;
 }
 .projects .project {

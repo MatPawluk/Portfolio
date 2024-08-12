@@ -58,11 +58,11 @@
         color: $white;
         font-weight: 600;
         font-size: 2rem;
+        border: 1px solid $rose;
         transition: all 0.3s ease-in-out;
 
         &:hover {
           background: transparent;
-          border: 1px solid $rose;
           color: $rose;
         }
       }
