@@ -41,11 +41,13 @@
     align-items: center;
     justify-content: space-around;
     overflow-x: scroll;
-    gap: 50px;
-    max-width: 90vw;
+    gap: 20px;
+    max-width: 100vw;
+    padding-inline: 10px;
 
     @media screen and (min-width: 1442px) {
       overflow: visible;
+      padding-block: 10rem;
     }
 
     a {

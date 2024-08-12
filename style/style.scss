@@ -20,4 +20,6 @@ body {
   align-items: center;
   justify-content: center;
   background-color: $primary;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
