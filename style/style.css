@@ -401,6 +401,10 @@ nav.scrolled {
   width: 100%;
   color: #ffffff;
 }
+.price .quote {
+  font-family: "Anton";
+  font-size: 3rem;
+}
 .price hr {
   width: 200px;
   margin-block: 2rem;
@@ -408,10 +412,6 @@ nav.scrolled {
 .price h2 {
   display: block;
   width: 100%;
-}
-.price p:first-of-type span {
-  font-family: "Anton";
-  font-size: 7rem;
 }
 .price .services__cards {
   display: grid;

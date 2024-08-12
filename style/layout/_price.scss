@@ -8,6 +8,12 @@
   align-items: center;
   width: 100%;
   color: $white;
+
+  .quote {
+    font-family: "Anton";
+    font-size: 3rem;
+  }
+
   hr {
     width: 200px;
     margin-block: 2rem;
@@ -16,22 +22,11 @@
     display: block;
     width: 100%;
   }
-  p:first-of-type {
-    span {
-      font-family: "Anton";
-      font-size: 7rem;
-    }
-  }
-
   .services__cards {
     display: grid;
     gap: 3rem;
     max-width: 1440px;
     justify-content: center;
-
-    // .quote {
-    //   font-size: 3rem;
-    // }
 
     &--card {
       display: flex;
