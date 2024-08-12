@@ -343,7 +343,7 @@ nav.scrolled {
 }
 @media screen and (min-width: 1442px) {
   .projects__container {
-    overflow: hidden;
+    overflow: visible;
   }
 }
 .projects__container a .project__more {
