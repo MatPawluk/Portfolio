@@ -408,6 +408,8 @@ nav.scrolled {
 .price .services__cards {
   display: grid;
   gap: 3rem;
+  max-width: 1440px;
+  justify-content: center;
 }
 .price .services__cards--card {
   display: flex;
@@ -426,10 +428,6 @@ nav.scrolled {
   font-family: "Anton";
   font-size: 6rem;
 }
-.price .services__cards--card:hover {
-  transform: scale(1.03);
-  box-shadow: 0px 7px 30px -12px rgb(66, 68, 90);
-}
 @media screen and (min-width: 992px) {
   .price .services__cards {
     grid-template-columns: repeat(3, 1fr);
@@ -445,6 +443,10 @@ nav.scrolled {
   }
   .price .services__cards .card3 {
     grid-area: 2/2/3/4;
+  }
+  .price .services__cards--card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 7px 30px -12px rgb(66, 68, 90);
   }
 }
 

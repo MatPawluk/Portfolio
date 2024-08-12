@@ -8,6 +8,7 @@
   align-items: center;
   width: 100%;
   color: $white;
+
   h2 {
     display: block;
     width: 100%;
@@ -16,6 +17,8 @@
   .services__cards {
     display: grid;
     gap: 3rem;
+    max-width: 1440px;
+    justify-content: center;
 
     &--card {
       display: flex;
@@ -35,13 +38,6 @@
         font-family: "Anton";
         font-size: 6rem;
       }
-
-      &:hover {
-        transform: scale(1.03);
-        -webkit-box-shadow: 0px 7px 30px -12px rgba(66, 68, 90, 1);
-        -moz-box-shadow: 0px 7px 30px -12px rgba(66, 68, 90, 1);
-        box-shadow: 0px 7px 30px -12px rgba(66, 68, 90, 1);
-      }
     }
 
     @media screen and (min-width: 992px) {
@@ -58,6 +54,14 @@
       }
       .card3 {
         grid-area: 2 / 2 / 3 / 4;
+      }
+      &--card {
+        &:hover {
+          transform: scale(1.03);
+          -webkit-box-shadow: 0px 7px 30px -12px rgba(66, 68, 90, 1);
+          -moz-box-shadow: 0px 7px 30px -12px rgba(66, 68, 90, 1);
+          box-shadow: 0px 7px 30px -12px rgba(66, 68, 90, 1);
+        }
       }
     }
   }
